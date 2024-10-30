@@ -7,9 +7,9 @@ import toast from 'react-hot-toast';
 export const Profile = () => {
   const [user, setUser] = useState({
     prefix: 'Dr.',
-    name: 'John Doe',
+    name: 'Amrit Singh',
     mobile: '9826454554',
-    email: 'john.doe@example.com',
+    email: 'amritsingh@example.com',
     address: '123 Medical Lane, Garoth, MP',
     profileImage: ''
   });
