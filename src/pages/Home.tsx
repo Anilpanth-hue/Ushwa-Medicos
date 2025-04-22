@@ -86,7 +86,7 @@ export const Home = () => {
             About Ushwa Medical Agency
           </h2>
           <p className="text-gray-600 mb-8">
-            Founded in 1992 by Mr. Praveen Gupta, Ushwa Medical Agency has been
+            Founded in 2003 by Mr. Sharfaraz Khan, Ushwa Medical Agency has been
             at the forefront of medical supply distribution in Madhya Pradesh.
             Our commitment to quality, reliability, and customer service has
             made us a trusted partner for healthcare professionals across the
@@ -95,19 +95,19 @@ export const Home = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
             <div>
               <div className="text-4xl font-bold text-primary-600 mb-2">
-                30+
+                20+
               </div>
               <div className="text-gray-600">Years of Experience</div>
             </div>
             <div>
               <div className="text-4xl font-bold text-primary-600 mb-2">
-                100000+
+                5000+
               </div>
               <div className="text-gray-600">Products</div>
             </div>
             <div>
               <div className="text-4xl font-bold text-primary-600 mb-2">
-                50000+
+                10000+
               </div>
               <div className="text-gray-600">Happy Customers</div>
             </div>

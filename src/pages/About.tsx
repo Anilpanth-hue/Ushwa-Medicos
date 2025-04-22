@@ -39,9 +39,9 @@ export const About = () => {
         <div className="bg-white rounded-lg shadow-sm p-8">
           <h2 className="text-3xl font-bold mb-6">Our Journey</h2>
           <p className="text-gray-600 mb-6">
-            Founded in 1992 by Mr. Praveen Gupta, Ushwa Medical Agency began
+            Founded in 2003 by Mr. Sharfaraz Khan, Ushwa Medical Agency began
             with a vision to provide quality medical supplies to healthcare
-            professionals in Garoth and surrounding areas. What started as a
+            professionals in Sohna and surrounding areas. What started as a
             small medical store has now grown into one of the most trusted
             medical supply agencies in Madhya Pradesh.
           </p>
