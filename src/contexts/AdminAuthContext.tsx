@@ -1,6 +1,6 @@
-import React, { createContext, useContext, useState } from 'react';
-import { AdminUser } from '../types/admin';
-import toast from 'react-hot-toast';
+import React, { createContext, useContext, useState } from "react";
+import { AdminUser } from "../types/admin";
+import toast from "react-hot-toast";
 
 interface AdminAuthContextType {
   admin: AdminUser | null;
@@ -9,33 +9,37 @@ interface AdminAuthContextType {
   logout: () => void;
 }
 
-const AdminAuthContext = createContext<AdminAuthContextType | undefined>(undefined);
+const AdminAuthContext = createContext<AdminAuthContextType | undefined>(
+  undefined
+);
 
-export const AdminAuthProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+export const AdminAuthProvider: React.FC<{ children: React.ReactNode }> = ({
+  children,
+}) => {
   const [admin, setAdmin] = useState<AdminUser | null>(null);
 
   const login = async (username: string, password: string) => {
     try {
       // In production, this would be an API call
-      if (username === 'vivek' && password === 'Vivek@123') {
+      if (username === "Ushwa" && password === "Ushwa@123") {
         const adminUser: AdminUser = {
-          username: 'vivek',
-          role: 'admin'
+          username: "Ushwa",
+          role: "admin",
         };
         setAdmin(adminUser);
-        toast.success('Welcome back, Admin!');
+        toast.success("Welcome back, Admin!");
       } else {
-        throw new Error('Invalid credentials');
+        throw new Error("Invalid credentials");
       }
     } catch (error) {
-      toast.error('Invalid username or password');
+      toast.error("Invalid username or password");
       throw error;
     }
   };
 
   const logout = () => {
     setAdmin(null);
-    toast.success('Logged out successfully');
+    toast.success("Logged out successfully");
   };
 
   return (
@@ -44,7 +48,7 @@ export const AdminAuthProvider: React.FC<{ children: React.ReactNode }> = ({ chi
         admin,
         isAuthenticated: !!admin,
         login,
-        logout
+        logout,
       }}
     >
       {children}
@@ -55,7 +59,7 @@ export const AdminAuthProvider: React.FC<{ children: React.ReactNode }> = ({ chi
 export const useAdminAuth = () => {
   const context = useContext(AdminAuthContext);
   if (context === undefined) {
-    throw new Error('useAdminAuth must be used within an AdminAuthProvider');
+    throw new Error("useAdminAuth must be used within an AdminAuthProvider");
   }
   return context;
 };

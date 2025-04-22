@@ -1,11 +1,12 @@
-# VIVEK MEDICAL AGENCY - E-commerce Platform
+# Ushwa MEDICAL AGENCY - E-commerce Platform
 
-Welcome to the official GitHub repository for **VIVEK MEDICAL AGENCY**'s e-commerce platform. This project enables **Vivek Medical Agency** to manage their product inventory, customer orders, and admin analytics for their wholesale medical supply business.
+Welcome to the official GitHub repository for **Ushwa MEDICAL AGENCY**'s e-commerce platform. This project enables **Ushwa Medical Agency** to manage their product inventory, customer orders, and admin analytics for their wholesale medical supply business.
 
 ## Project Overview
 
 ### Business Details
-- **Name:** Vivek Medical Agency
+
+- **Name:** Ushwa Medical Agency
 - **Address:** Old Bus Stand, Shahid Chowk, Garoth, Distt-Mandsaur, Madhya Pradesh - 458880
 - **Owner:** Praveen Gupta
 - **Contact:** +91 98264 54554
@@ -13,6 +14,7 @@ Welcome to the official GitHub repository for **VIVEK MEDICAL AGENCY**'s e-comme
 - **Established:** 1992
 
 ### Tech Stack
+
 - **Frontend:** React.js, Bootstrap CSS (mobile-first, responsive design)
 - **Backend:** Node.js, Express.js
 - **Database:** MongoDB
@@ -24,23 +26,27 @@ Welcome to the official GitHub repository for **VIVEK MEDICAL AGENCY**'s e-comme
 ### Admin Panel
 
 1. **Authentication**
+
    - Single admin account with predefined credentials:
-     - **Username:** vivek
-     - **Password:** Vivek@123
+     - **Username:** Ushwa
+     - **Password:** Ushwa@123
    - Protected routes with JWT-based authentication.
 
 2. **Dashboard**
+
    - **Sales Analytics:** Filter by daily, weekly, monthly, and yearly statistics.
    - **Stock Management:** Live tracking and low-stock alerts.
    - **Order Statistics:** View order completion rates and outstanding orders.
 
 3. **Product Management**
+
    - **CRUD Operations** for products, including:
      - **Fields:** Name, drug formula, unit price, box price, image, category, stock.
      - **Image Upload:** Integration with cloud storage for image management.
    - **Category Management:** Create, view, edit, and delete product categories.
 
 4. **Order Management**
+
    - **Order Overview:** Modify orders, update statuses (pending/completed/delivered).
    - **Stock Adjustment:** Real-time adjustments on stock levels when orders are processed.
 
@@ -51,10 +57,12 @@ Welcome to the official GitHub repository for **VIVEK MEDICAL AGENCY**'s e-comme
 ### Customer Panel
 
 1. **Authentication**
+
    - **Social Login:** Sign in with Google or Facebook.
    - **Email/Phone Registration:** Custom registration with a default "Dr." prefix and standard Indian phone number format.
 
 2. **Shopping Experience**
+
    - **Product Browsing:** View products with grid/card views.
    - **Search:** Quick search by drug/product name.
    - **Cart Management:** Add/remove items, checkout process.
@@ -71,6 +79,7 @@ Welcome to the official GitHub repository for **VIVEK MEDICAL AGENCY**'s e-comme
    - **Profile:** User profile management.
 
 ### Additional Functionalities
+
 - **Responsive Design:** Mobile-first with a teal pastel medical-themed UI.
 - **Toast Notifications:** Instant feedback on user actions.
 - **Data Validation and Error Handling:** Form validation and proper error messaging.
@@ -81,12 +90,14 @@ Welcome to the official GitHub repository for **VIVEK MEDICAL AGENCY**'s e-comme
 ## Installation
 
 1. Clone the repository:
+
    ```bash
-   git clone https://github.com/kartik2629/vivek-medical-agency.git
-   cd vivek-medical-agency
+   git clone https://github.com/kartik2629/Ushwa-medical-agency.git
+   cd Ushwa-medical-agency
    ```
 
 2. **Backend Setup**
+
    - Install dependencies:
      ```bash
      cd backend
@@ -96,8 +107,8 @@ Welcome to the official GitHub repository for **VIVEK MEDICAL AGENCY**'s e-comme
      ```plaintext
      MONGODB_URI=your-mongodb-connection-string
      JWT_SECRET=your-jwt-secret
-     ADMIN_USERNAME=vivek
-     ADMIN_PASSWORD=Vivek@123
+     ADMIN_USERNAME=Ushwa
+     ADMIN_PASSWORD=Ushwa@123
      ```
    - Start the server:
      ```bash
@@ -144,6 +155,7 @@ Welcome to the official GitHub repository for **VIVEK MEDICAL AGENCY**'s e-comme
 ## Dependencies
 
 ### Backend
+
 - **Express.js**: Node.js web application framework.
 - **MongoDB**: Database.
 - **Mongoose**: MongoDB object modeling tool.
@@ -151,11 +163,13 @@ Welcome to the official GitHub repository for **VIVEK MEDICAL AGENCY**'s e-comme
 - **Bcrypt**: Password hashing.
 
 ### Frontend
+
 - **React.js**: JavaScript library for building user interfaces.
 - **Bootstrap**: CSS framework for styling.
 - **Axios**: HTTP client for API requests.
 
 ## Future Enhancements
+
 - **Payment Gateway Integration**: Integrate Razorpay or Stripe for online payments.
 - **Product Reviews**: Allow customers to review and rate products.
 - **Push Notifications**: Real-time notifications for app users.

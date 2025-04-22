@@ -1,21 +1,21 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { Phone, Mail, MapPin, Send } from 'lucide-react';
-import toast from 'react-hot-toast';
+import React, { useState } from "react";
+import { motion } from "framer-motion";
+import { Phone, Mail, MapPin, Send } from "lucide-react";
+import toast from "react-hot-toast";
 
 export const Contact = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    message: ''
+    name: "",
+    email: "",
+    phone: "",
+    message: "",
   });
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // In production, this would send the data to an API
-    toast.success('Message sent successfully!');
-    setFormData({ name: '', email: '', phone: '', message: '' });
+    toast.success("Message sent successfully!");
+    setFormData({ name: "", email: "", phone: "", message: "" });
   };
 
   return (
@@ -24,7 +24,7 @@ export const Contact = () => {
         {/* Contact Information */}
         <div>
           <h1 className="text-3xl font-bold mb-8">Get in Touch</h1>
-          
+
           <div className="space-y-6">
             <div className="flex items-start space-x-4">
               <div className="p-3 bg-primary-100 rounded-lg">
@@ -53,8 +53,10 @@ export const Contact = () => {
               <div>
                 <h3 className="font-semibold mb-1">Address</h3>
                 <p className="text-gray-600">
-                  Old Bus Stand, Shahid Chowk,<br />
-                  Garoth, Distt-Mandsaur,<br />
+                  Old Bus Stand, Shahid Chowk,
+                  <br />
+                  Garoth, Distt-Mandsaur,
+                  <br />
                   Madhya Pradesh - 458880
                 </p>
               </div>
@@ -74,7 +76,7 @@ export const Contact = () => {
         {/* Contact Form */}
         <div className="bg-white rounded-lg shadow-sm p-8">
           <h2 className="text-2xl font-bold mb-6">Send us a Message</h2>
-          
+
           <form onSubmit={handleSubmit} className="space-y-6">
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-1">
@@ -84,7 +86,9 @@ export const Contact = () => {
                 type="text"
                 required
                 value={formData.name}
-                onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                onChange={(e) =>
+                  setFormData({ ...formData, name: e.target.value })
+                }
                 className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500"
               />
             </div>
@@ -97,7 +101,9 @@ export const Contact = () => {
                 type="email"
                 required
                 value={formData.email}
-                onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                onChange={(e) =>
+                  setFormData({ ...formData, email: e.target.value })
+                }
                 className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500"
               />
             </div>
@@ -110,7 +116,9 @@ export const Contact = () => {
                 type="tel"
                 required
                 value={formData.phone}
-                onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                onChange={(e) =>
+                  setFormData({ ...formData, phone: e.target.value })
+                }
                 className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500"
               />
             </div>
@@ -123,7 +131,9 @@ export const Contact = () => {
                 required
                 rows={4}
                 value={formData.message}
-                onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                onChange={(e) =>
+                  setFormData({ ...formData, message: e.target.value })
+                }
                 className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500"
               />
             </div>
@@ -146,7 +156,7 @@ export const Contact = () => {
         <div className="bg-white rounded-lg shadow-sm p-4">
           <iframe
             title="Location Map"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3635.5980745331885!2d75.64939807596654!3d24.325650878282275!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3965a96ee39dca51%3A0xa5ac592a63f55163!2sVivek%20Medical%20Agency!5e0!3m2!1sen!2sin!4v1730274582337!5m2!1sen!2sin"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3635.5980745331885!2d75.64939807596654!3d24.325650878282275!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3965a96ee39dca51%3A0xa5ac592a63f55163!2sUshwa%20Medical%20Agency!5e0!3m2!1sen!2sin!4v1730274582337!5m2!1sen!2sin"
             width="100%"
             height="400"
             style={{ border: 0 }}

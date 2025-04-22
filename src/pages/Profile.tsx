@@ -1,22 +1,22 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { Camera, User as UserIcon } from 'lucide-react';
-import { formatPhoneNumber } from '../utils/format';
-import toast from 'react-hot-toast';
+import React, { useState } from "react";
+import { motion } from "framer-motion";
+import { Camera, User as UserIcon } from "lucide-react";
+import { formatPhoneNumber } from "../utils/format";
+import toast from "react-hot-toast";
 
 export const Profile = () => {
   const [user, setUser] = useState({
-    prefix: 'Dr.',
-    name: 'Amrit Singh',
-    mobile: '9826454554',
-    email: 'amritsingh@example.com',
-    address: '123 Medical Lane, Garoth, MP',
-    profileImage: ''
+    prefix: "Dr.",
+    name: "Amrit Singh",
+    mobile: "9826454554",
+    email: "amritsingh@example.com",
+    address: "123 Medical Lane, Garoth, MP",
+    profileImage: "",
   });
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    toast.success('Profile updated successfully');
+    toast.success("Profile updated successfully");
   };
 
   return (

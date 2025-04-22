@@ -1,12 +1,12 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { useNavigate } from 'react-router-dom';
-import { Lock, User } from 'lucide-react';
-import { useAdminAuth } from '../../contexts/AdminAuthContext';
+import React, { useState } from "react";
+import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
+import { Lock, User } from "lucide-react";
+import { useAdminAuth } from "../../contexts/AdminAuthContext";
 
 export const AdminLogin = () => {
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const { login } = useAdminAuth();
   const navigate = useNavigate();
@@ -14,10 +14,10 @@ export const AdminLogin = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsLoading(true);
-    
+
     try {
       await login(username, password);
-      navigate('/admin/dashboard');
+      navigate("/admin/dashboard");
     } catch (error) {
       // Error is handled by the context
     } finally {
@@ -33,10 +33,10 @@ export const AdminLogin = () => {
             Admin Login
           </h2>
           <p className="mt-2 text-center text-sm text-gray-600">
-            VIVEK MEDICAL AGENCY
+            Ushwa MEDICAL AGENCY
           </p>
         </div>
-        
+
         <form className="mt-8 space-y-6" onSubmit={handleSubmit}>
           <div className="rounded-md shadow-sm space-y-4">
             <div>
@@ -59,7 +59,7 @@ export const AdminLogin = () => {
                 />
               </div>
             </div>
-            
+
             <div>
               <label htmlFor="password" className="sr-only">
                 Password
@@ -88,10 +88,10 @@ export const AdminLogin = () => {
             type="submit"
             disabled={isLoading}
             className={`group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-primary-600 hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 ${
-              isLoading ? 'opacity-75 cursor-not-allowed' : ''
+              isLoading ? "opacity-75 cursor-not-allowed" : ""
             }`}
           >
-            {isLoading ? 'Signing in...' : 'Sign in'}
+            {isLoading ? "Signing in..." : "Sign in"}
           </motion.button>
         </form>
       </div>
