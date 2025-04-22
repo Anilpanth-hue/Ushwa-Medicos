@@ -32,7 +32,7 @@ export const Contact = () => {
               </div>
               <div>
                 <h3 className="font-semibold mb-1">Phone</h3>
-                <p className="text-gray-600">+91 98264 54554</p>
+                <p className="text-gray-600">+91 8053220888</p>
               </div>
             </div>
 
@@ -42,7 +42,7 @@ export const Contact = () => {
               </div>
               <div>
                 <h3 className="font-semibold mb-1">Email</h3>
-                <p className="text-gray-600">v_meddical@yahoo.in</p>
+                <p className="text-gray-600">ushwamedicos@gmail.com</p>
               </div>
             </div>
 
@@ -53,11 +53,9 @@ export const Contact = () => {
               <div>
                 <h3 className="font-semibold mb-1">Address</h3>
                 <p className="text-gray-600">
-                  Old Bus Stand, Shahid Chowk,
+                  Near BaiPass Sohna,
                   <br />
-                  Garoth, Distt-Mandsaur,
-                  <br />
-                  Madhya Pradesh - 458880
+                  Gurgaon, Haryana - 122103
                 </p>
               </div>
             </div>

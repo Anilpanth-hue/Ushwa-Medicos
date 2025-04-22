@@ -14,23 +14,21 @@ export const Footer = () => {
                 className="flex items-center space-x-2 hover:text-primary-200"
               >
                 <Phone className="h-5 w-5" />
-                <span>+91 98264 54554</span>
+                <span>+91 8053220888</span>
               </a>
               <a
                 href="mailto:v_meddical@yahoo.in"
                 className="flex items-center space-x-2 hover:text-primary-200"
               >
                 <Mail className="h-5 w-5" />
-                <span>v_meddical@yahoo.in</span>
+                <span>ushwamedicos@gmail.com</span>
               </a>
               <div className="flex items-start space-x-2">
                 <MapPin className="h-5 w-5 mt-1 flex-shrink-0" />
                 <p>
-                  Old Bus Stand, Shahid Chowk,
+                  Near BaiPass Sohna,
                   <br />
-                  Garoth, Distt-Mandsaur,
-                  <br />
-                  Madhya Pradesh - 458880
+                  Gurgaon, Haryana - 122103
                 </p>
               </div>
             </div>
