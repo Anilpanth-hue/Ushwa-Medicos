@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { Bell, Package, ShoppingCart, Truck } from 'lucide-react';
 

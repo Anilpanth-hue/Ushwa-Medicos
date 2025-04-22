@@ -1,60 +1,65 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { ShoppingCart, Package } from 'lucide-react';
-import { Product } from '../types';
-import { formatPrice } from '../utils/format';
+"use client";
+
+import type React from "react";
+import Image from "next/image";
+import { motion } from "framer-motion";
+import { ShoppingCart } from "lucide-react";
+import type { Product } from "../types";
 
 interface ProductCardProps {
   product: Product;
   onAddToCart: (product: Product) => void;
 }
 
-export const ProductCard: React.FC<ProductCardProps> = ({ product, onAddToCart }) => {
+export const ProductCard: React.FC<ProductCardProps> = ({
+  product,
+  onAddToCart,
+}) => {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
-      className="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow"
+      transition={{ duration: 0.3 }}
+      className="bg-white rounded-lg shadow-md overflow-hidden border border-gray-100 hover:shadow-lg transition-shadow"
     >
-      <div className="relative h-48 rounded-t-lg overflow-hidden">
-        <img
-          src={product.imageUrl}
+      <div className="relative h-48 w-full bg-gray-100">
+        <Image
+          src={product.imageUrl || "/placeholder.svg"}
           alt={product.name}
-          className="w-full h-full object-cover"
+          fill
+          className="object-cover"
         />
-        {product.stock < 10 && (
-          <div className="absolute top-2 right-2 bg-red-500 text-white px-2 py-1 rounded-full text-xs">
-            Low Stock
-          </div>
-        )}
       </div>
-      
-      <div className="p-4">
-        <h3 className="text-lg font-semibold mb-1">{product.name}</h3>
-        <p className="text-sm text-gray-600 mb-2">{product.drugFormula}</p>
-        
-        <div className="flex justify-between items-center mb-4">
+
+      <div className="p-4 space-y-2">
+        <h3 className="font-semibold text-lg text-gray-800">{product.name}</h3>
+        <p className="text-sm text-gray-600">{product.drugFormula}</p>
+
+        <div className="flex justify-between items-center pt-2">
           <div>
-            <div className="text-primary-600 font-semibold">{formatPrice(product.unitPrice)}</div>
-            <div className="text-sm text-gray-500">per unit</div>
+            <p className="text-lg font-bold text-teal-600">
+              ₹{product.unitPrice.toFixed(2)}
+            </p>
+            <p className="text-xs text-gray-500">per unit</p>
           </div>
           <div className="text-right">
-            <div className="text-primary-600 font-semibold">{formatPrice(product.boxPrice)}</div>
-            <div className="text-sm text-gray-500">per box</div>
+            <p className="text-lg font-bold text-teal-600">
+              ₹{product.boxPrice.toFixed(2)}
+            </p>
+            <p className="text-xs text-gray-500">per box</p>
           </div>
         </div>
-        
-        <div className="flex items-center justify-between">
-          <div className="flex items-center text-sm text-gray-600">
-            <Package className="h-4 w-4 mr-1" />
-            <span>{product.stock} in stock</span>
-          </div>
+
+        <div className="flex justify-between items-center pt-2">
+          <p className="text-sm text-gray-600">
+            <span className="font-medium">{product.stock}</span> in stock
+          </p>
           <button
             onClick={() => onAddToCart(product)}
-            className="flex items-center space-x-1 bg-primary-600 text-white px-3 py-2 rounded-lg hover:bg-primary-700 transition-colors"
+            className="flex items-center space-x-1 bg-teal-500 hover:bg-teal-600 text-white px-3 py-1.5 rounded-md transition-colors"
           >
             <ShoppingCart className="h-4 w-4" />
-            <span>Add to Cart</span>
+            <span>Add</span>
           </button>
         </div>
       </div>

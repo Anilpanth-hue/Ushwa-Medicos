@@ -1,19 +1,18 @@
-import React from 'react';
-import { Routes, Route } from 'react-router-dom';
-import { Home } from '../pages/Home';
-import { Products } from '../pages/Products';
-import { Cart } from '../pages/Cart';
-import { Orders } from '../pages/Orders';
-import { Profile } from '../pages/Profile';
-import { About } from '../pages/About';
-import { Contact } from '../pages/Contact';
-import { Notifications } from '../pages/Notifications';
-import { Login } from '../pages/auth/Login';
+import { Routes, Route } from "react-router-dom";
+import { Home } from "../pages/Home";
+import { Cart } from "../pages/Cart";
+import { Orders } from "../pages/Orders";
+import { Profile } from "../pages/Profile";
+import { About } from "../pages/About";
+import { Contact } from "../pages/Contact";
+import { Notifications } from "../pages/Notifications";
+import { Login } from "../pages/auth/Login";
 // import { Register } from '../pages/auth/Register';
-import { AdminLogin } from '../pages/admin/Login';
-import { AdminDashboard } from '../pages/admin/Dashboard';
-import { ProtectedRoute } from './ProtectedRoute';
-import { AdminRoute } from './AdminRoute';
+import { AdminLogin } from "../pages/admin/Login";
+import { AdminDashboard } from "../pages/admin/Dashboard";
+import { ProtectedRoute } from "./ProtectedRoute";
+import { AdminRoute } from "./AdminRoute";
+import Products from "../pages/Products";
 
 export const AppRoutes = () => {
   return (
